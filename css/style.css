@@ -87,6 +87,7 @@ p {
 img {
   border-radius: 12px;
   max-width: 100%;
+
 }
 
 body.dark .change-theme-button {
@@ -160,7 +161,6 @@ small {
 }
 
 .description {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 20px;
 }
 
@@ -185,7 +185,7 @@ body.dark .logo {
 .yogurt-picture {
   margin: 15px 0;
   background-origin: 10px 10px;
-  transition:  all 150ms ease-in-out;
+  transition:  all 150ms ease-in-out;;
 
 }
 
@@ -198,4 +198,9 @@ body.dark .logo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap:  20px;
+}
+
+.grid img {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }

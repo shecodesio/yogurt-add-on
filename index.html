@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greek Yogurt | SheCodes Workshop Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <a href="https://www.shecodes.io/" target="_blank">
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/001/original/logo.png?1627901693" class="logo" alt="SheCodes Logo" />
+      <img src="images/logo-white.png" class="logo-light" alt="SheCodes Logo" />
+    </a>
+    <button id="change-theme-button" class="change-theme-button">
+      Change theme
+    </button>
+  <div class="container">
+    <h1>I Love Yogurt</h1>
+    <h2>Especially Greek Yogurt</h2>
+    <a href="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" target="_blank">
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" class="yogurt-picture" alt="Yogurt" />
+    </a>
+    <div class="grid">
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" class="picture-grid" alt="Yogurt" />
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" class="picture-grid" alt="Yogurt" />
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" class="picture-grid" alt="Yogurt" />
+      <img src="https://s3.amazonaws.com/shecodesio-development/uploads/files/000/000/002/original/yogurt.jpg?1627901702" class="picture-grid" alt="Yogurt" />
+    </div>
+    <div class="description">
+      <p>
+        Strained yogurt, Greek yogurt, yogurt cheese, sack yogurt, or kerned
+        yogurt is yogurt that has been strained to remove most of its whey,
+        resulting in a thicker consistency than regular unstrained yogurt,
+        while still preserving the distinctive sour taste of yogurt. Give it a
+        try!
+        <br /><br />
+        📖
+        <a href="https://en.wikipedia.org/wiki/Strained_yogurt">
+          <strong> Read on Wikipedia </strong>
+        </a>
+      </p>
+    </div>
+    <button id="order-button" class="order-button">Order Greek Yogurt</button>
+    <p>
+      <small>
+        Coded by 👩‍💻
+        <a href="https://www.shecodes.io" target="_blank">SheCodes</a> with
+        HTML, CSS and JavaScript
+      </small>
+    </p>
+  </div>
+  <script>
+    function order() {
+      let quanty = prompt("How many cups would you like?");
+      let name = prompt("What is your first name?");
+      let email = prompt("What is your email?");
+
+      alert(
+        "Thanks " +
+        name +
+        "! We'll be in touch soon with more details. Feel free to contact us if you have any questions hello@shecodes.io"
+        );
+    }
+
+    function toggleTheme() {
+      if (theme === "light") {
+        theme = "dark";
+        document.querySelector("body").classList.add("dark");
+      } else {
+        theme = "light";
+        document.querySelector("body").classList.remove("dark");
+      }
+    }
+
+
+
+    let button = document.querySelector("#order-button");
+    button.addEventListener("click", order);
+
+
+
+    let theme = "light";
+    let themeButton = document.querySelector("#change-theme-button");
+    themeButton.addEventListener("click", toggleTheme)
+  </script>
+</body>
+</html>
